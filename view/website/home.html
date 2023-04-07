@@ -71,14 +71,14 @@
 			{/foreach}
 		</div>
 	</div>
-	<div class="products">
+	<div class="products" style="position: relative; padding: 0 50px">
 		<?php
 				$index = count($categorylist);
 					?>
 		<div class="title">产品系列</div>
 		<div class="subtitle">公司产品覆盖十几个系列，满足客户多种需求</div>
 		<!-- Swiper -->
-		<div class="swiper-container">
+		<div class="swiper-container" style="width: 40%;">
 			<div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1190px, 0px, 0px);">
 <!--				{for start='0' end='$index'}-->
 				{foreach $categorylist as $category}
@@ -105,9 +105,11 @@
 <!--				</div>-->
 <!--				{/for}-->
 			</div>
-			<div class="swiper-nav-btn swiper-button-next"></div>
-			<div class="swiper-nav-btn swiper-button-prev"></div>
+
 		</div>
+		<div class="swiper-button-next" style="margin-right: 300px"></div>
+		<div class="swiper-button-prev" style="margin-left: 300px"></div>
+
 		<div class="more-btn">更多产品系列</div>
 	</div>
 	<div class="foot">
@@ -137,15 +139,24 @@
 </div>
 
 <!-- Swiper JS -->
-<script src="/static/swiper//swiper-bundle.min.js"></script>
+<script src="/static/swiper/swiper-bundle.min.js"></script>
 
 <!-- Initialize Swiper -->
 <script>
 	var swiper = new Swiper('.swiper-container', {
-		slidesPerView: 3,
+		effect:'coverflow',
+		grabCursor:true,
+		slidesPerView: 1.8,
 		spaceBetween: 10,
 		centeredSlides: true,
 		loop: true,
+		coverflowEffect:{
+			rotate:0,
+			stretch: 100,
+			depth:250,
+			modifier:1,
+			slideShadows:false,
+		},
 		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
