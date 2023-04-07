@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>设备中心</title>
+	<link rel="stylesheet" href="/static/style/index.css"></link>
+	<!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="/static/swiper/swiper-bundle.min.css" />
+
+</head>
+<body>
+
+	<div class="equipment">
+		<div class="header">
+			<div class="logo">
+				<img src="/static/images/home/logo.png" alt="logo">
+			</div>
+			<ul class="nav">
+				<a href="{:url('website')}">
+					<li>首页</li>
+				</a>
+				<a href="{:url('website/about')}">
+					<li>关于我们</li>
+				</a>
+				<a href="{:url('website/product')}">
+					<li>产品展示</li>
+				</a>
+				<a href="{:url('website/equipment')}">
+					<li class="current">设备中心</li>
+				</a>
+				<a href="{:url('website/certs')}">
+					<li>荣誉证书</li>
+				</a>
+				<a href="{:url('website/contact')}">
+					<li>联系我们</li>
+				</a>
+			</ul>
+		</div>
+		<div class="banner">
+		</div>
+		<div class="container">
+			<div class="info-box">
+				<!-- <div class="pics">
+					<img src="/static/images/equipment/p1.png" alt="p1">
+					<div class="pic-row">
+						<img src="/static/images/equipment/p1-1.png" alt="p1-1">
+						<img src="/static/images/equipment/p1-2.png" alt="p1-2">
+						<img src="/static/images/equipment/p1-3.png" alt="p1-3">
+					</div>
+				</div> -->
+				<div class="sw-box">
+					<!-- Swiper -->
+					<div
+							style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+							class="swiper bigSwiper zsjBigSwiper"
+					>
+						<div class="swiper-wrapper">
+							{volist name="equipmentListOne" id="url"}
+							<div class="swiper-slide">
+								<img src="{$url['url']}" alt="">
+							</div>
+							{/volist}
+<!--							<div class="swiper-slide">-->
+<!--								<img src="/static/images/equipment/p1.png" alt="p1">-->
+<!--							</div>-->
+<!--							<div class="swiper-slide">-->
+<!--								<img src="/static/images/equipment/p1-1.png" alt="p1-1">-->
+<!--							</div>-->
+<!--							<div class="swiper-slide">-->
+<!--								<img src="/static/images/equipment/p1-2.png" alt="p1-2">-->
+<!--							</div>-->
+<!--							<div class="swiper-slide">-->
+<!--								<img src="/static/images/equipment/p1-3.png" alt="p1-3">-->
+<!--							</div>-->
+						</div>
+						<div class="swiper-button-next zsj-swiper-button-next"></div>
+						<div class="swiper-button-prev zsj-swiper-button-prev"></div>
+					</div>
+					<div thumbsSlider="" class="swiper thumbSwiper zsjThumbSwiper">
+						<div class="swiper-wrapper">
+							{volist name="equipmentListOne" id="url"}
+							<div class="swiper-slide">
+								<img src="{$url['url'] | default = ''}" alt="">
+							</div>
+							{/volist}
+						</div>
+					</div>
+				</div>
+				<div class="name">
+					<div class="iconfont">&#xed42;</div>
+					<div>{$equipmentList[0]['eq_name']}</div>
+				</div>
+			</div>
+		</div>
+		<div class="container" style="background-color: #f5f6f7;">
+			<div class="info-box">
+				<div class="name">
+					<div class="iconfont">&#xed4c;</div>
+					<div>{$equipmentList[1]['eq_name']}</div>
+				</div>
+				<!-- <div class="pics">
+					<img src="/static/images/equipment/p2.png" alt="p2">
+					<div class="pic-row">
+						<img src="/static/images/equipment/p2-1.png" alt="p2-1">
+						<img src="/static/images/equipment/p2-2.png" alt="p2-2">
+					</div>
+				</div> -->
+				<div class="sw-box">
+					<!-- Swiper -->
+					<div
+							style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+							class="swiper bigSwiper ctczBigSwiper"
+					>
+						<div class="swiper-wrapper">
+							{volist name="equipmentListTwo" id="url"}
+							<div class="swiper-slide">
+								<img src="{$url['url'] | default = ''}" alt="">
+							</div>
+							{/volist}
+						</div>
+						<div class="swiper-button-next ctcz-swiper-button-next"></div>
+						<div class="swiper-button-prev ctcz-swiper-button-prev"></div>
+					</div>
+					<div thumbsSlider="" class="swiper thumbSwiper ctczThumbSwiper">
+						<div class="swiper-wrapper">
+							{volist name="equipmentListTwo" id="url"}
+							<div class="swiper-slide">
+								<img src="{$url['url']| default = ''}" alt="">
+							</div>
+							{/volist}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="info-box">
+				<!-- <div class="pics">
+					<img src="/static/images/equipment/p3.png" alt="p3">
+					<div class="pic-row">
+						<img src="/static/images/equipment/p3-1.png" alt="p3-1">
+						<img src="/static/images/equipment/p3-2.png" alt="p3-2">
+						<img src="/static/images/equipment/p3-3.png" alt="p3-3">
+					</div>
+				</div> -->
+				<div class="sw-box">
+					<!-- Swiper -->
+					<div
+							style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+							class="swiper bigSwiper qyhjBigSwiper"
+					>
+						<div class="swiper-wrapper">
+							{volist name="equipmentListThree" id="url"}
+							<div class="swiper-slide">
+								<img src="{$url['url']}" alt="">
+							</div>
+							{/volist}
+						</div>
+						<div class="swiper-button-next qyhj-swiper-button-next"></div>
+						<div class="swiper-button-prev qyhj-swiper-button-prev"></div>
+					</div>
+					<div thumbsSlider="" class="swiper thumbSwiper qyhjThumbSwiper">
+						<div class="swiper-wrapper">
+							{volist name="equipmentListThree" id="url"}
+							<div class="swiper-slide">
+								<img src="{$url['url']}" alt="">
+							</div>
+							{/volist}
+						</div>
+					</div>
+				</div>
+				<div class="name">
+					<div class="iconfont">&#xed86;</div>
+					<div>{$equipmentList[2]['eq_name']}</div>
+				</div>
+			</div>
+		</div>
+		<div class="foot">
+			<div class="info">
+				<div class="name">宁波豪勝电器有限公司</div>
+				<div class="addr">地址：浙江省慈溪市观海卫镇鸣兴西路166号</div>
+			</div>
+			<div class="contacts">
+				<div class="item">
+					<span class="iconfont">&#xed4d;</span>
+					<a href="tel:0574-63673030">0574-63673030</a>
+				</div>
+				<div class="item">
+					<span class="iconfont">&#xed41;</span>
+					<a href="tel:0574-63672676">0574-63672676</a>
+				</div>
+				<div class="item">
+					<span class="iconfont">&#xed51;</span>
+					<a href="mailto:Jenny@hottem.cn">Jenny@hottem.cn</a>
+				</div>
+				<div class="item">
+					<span class="iconfont">&#xed51;</span>
+					<a href="mailto:Creek@hottem.cn">Creek@hottem.cn</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Swiper JS -->
+    <script src="/static/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var zsjThumbSwiper = new Swiper(".zsjThumbSwiper", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 3,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var zsjBigSwiper = new Swiper(".zsjBigSwiper", {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: " .zsj-swiper-button-next",
+          prevEl: ".zsj-swiper-button-prev",
+        },
+        thumbs: {
+          swiper: zsjThumbSwiper,
+        },
+      });
+
+	  var ctczThumbSwiper = new Swiper(".ctczThumbSwiper", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 3,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var ctczBigSwiper = new Swiper(".ctczBigSwiper", {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".ctcz-swiper-button-next",
+          prevEl: ".ctcz-swiper-button-prev",
+        },
+        thumbs: {
+          swiper: ctczThumbSwiper,
+        },
+      });
+
+	  var qyhjThumbSwiper = new Swiper(".qyhjThumbSwiper", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 3,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var qyhjBigSwiper = new Swiper(".qyhjBigSwiper", {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".qyhj-swiper-button-next",
+          prevEl: ".qyhj-swiper-button-prev",
+        },
+        thumbs: {
+          swiper: qyhjThumbSwiper,
+        },
+      });
+    </script>
+</body>
+</html>

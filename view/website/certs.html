@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>荣誉证书</title>
+	<link rel="stylesheet" href="/static/style/index.css"></link>
+	<!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="/static/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+	<div class="certs">
+		<div class="header">
+			<div class="logo">
+				<img src="/static/images/home/logo.png" alt="logo">
+			</div>
+			<ul class="nav">
+				<a href="{:url('website')}">
+					<li>首页</li>
+				</a>
+				<a href="{:url('website/about')}">
+					<li>关于我们</li>
+				</a>
+				<a href="{:url('website/product')}">
+					<li>产品展示</li>
+				</a>
+				<a href="{:url('website/equipment')}">
+					<li>设备中心</li>
+				</a>
+				<a href="{:url('website/certs')}">
+					<li class="current">荣誉证书</li>
+				</a>
+				<a href="{:url('website/contact')}">
+					<li>联系我们</li>
+				</a>
+			</ul>
+		</div>
+		<div class="banner">
+		</div>
+		<div class="cert-box">
+			 <!-- Swiper -->
+			 <div class="swiper-container">
+				<div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1190px, 0px, 0px);">
+					{foreach $certificateList as $certificate}
+					<div class="swiper-slide">
+						<img src="{$certificate['certificate_pic'][0]['url'] | default =''}" style="width: 364px;height: 530px">
+					</div>
+					{/foreach}
+				</div>
+			  </div>
+		</div>
+		<div class="foot">
+			<div class="info">
+				<div class="name">宁波豪勝电器有限公司</div>
+				<div class="addr">地址：浙江省慈溪市观海卫镇鸣兴西路166号</div>
+			</div>
+			<div class="contacts">
+				<div class="item">
+					<span class="iconfont">&#xed4d;</span>
+					<a href="tel:0574-63673030">0574-63673030</a>
+				</div>
+				<div class="item">
+					<span class="iconfont">&#xed41;</span>
+					<a href="tel:0574-63672676">0574-63672676</a>
+				</div>
+				<div class="item">
+					<span class="iconfont">&#xed51;</span>
+					<a href="mailto:Jenny@hottem.cn">Jenny@hottem.cn</a>
+				</div>
+				<div class="item">
+					<span class="iconfont">&#xed51;</span>
+					<a href="mailto:Creek@hottem.cn">Creek@hottem.cn</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Swiper JS -->
+    <script src="/static/swiper/swiper-bundle.min.js"></script>
+
+	<!-- Initialize Swiper -->
+    <script>
+		var swiper = new Swiper('.swiper-container', {
+			slidesPerView: 3,
+			spaceBetween: 30,
+			centeredSlides: true,
+			loop: true,
+		});
+	</script>
+</body>
+</html>
