@@ -1,0 +1,766 @@
+html,
+body {
+	height: 100%;
+	width: 100%;
+	min-width: 1250px;
+	background-color: #feffff;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:visited {
+	color: black;
+}
+
+/* 图标 */
+@font-face {
+	font-family: 'iconfont';
+	src: url('/static/icons/fonts/iconfont.woff2?t=1677737724842') format('woff2'),
+		url('/static/icons/fonts/iconfont.woff?t=1677737724842') format('woff'),
+		url('/static/icons/fonts/iconfont.ttf?t=1677737724842') format('truetype');
+}
+
+.iconfont {
+	font-family: "iconfont" !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* 图标结束 */
+
+/* 首页 */
+.home,
+.about,
+.product,
+.equipment,
+.certs,
+.contact {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.home .banner {
+	background-image: url('/static/images/home/banner.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	width: 100%;
+	height: 620px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.home .banner .header {
+	width: 1200px;
+	height: 90px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.home .banner .header .logo {
+	width: 275px;
+	height: 90px;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.home .banner .header .nav {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	list-style-type: none;
+}
+
+.home .banner .header .nav a {
+	text-decoration: none;
+}
+
+.home .banner .header .nav li {
+	padding: 20px;
+	color: white;
+	font-weight: bold;
+}
+
+.home .banner .header .nav .current {
+	color: #fca641;
+}
+
+.home .company {
+	padding: 100px 0;
+	display: flex;
+	width: 1200px;
+	justify-content: center;
+	align-items: center;
+}
+
+.home .company img[alt=company] {
+	height: 585px;
+	width: 580px;
+	margin-right: 40px;
+}
+
+.home .company .info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.home .company .info .title {
+	font-size: 38px;
+}
+
+.home .company .info .text {
+	line-height: 45px;
+	font-size: 18px;
+}
+
+.home .company .info .icons img {
+	margin-right: 30px;
+}
+
+.home .certs {
+	height: 650px;
+	width: 100%;
+	background-image: url('/static/images/home/certbg.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.home .certs .title {
+	color: white;
+	font-size: 36px;
+	padding-bottom: 15px;
+}
+
+.home .certs .subtitle {
+	color: white;
+	font-size: 20px;
+	margin-bottom: 40px;
+}
+
+.home .certs .imgs img {
+	padding: 10px;
+}
+
+.home .products {
+	height: 695px;
+	width: 100%;
+	background-image: url('/static/images/home/prodbg.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.home .products .title {
+	font-size: 36px;
+	padding: 50px 0 15px 0;
+}
+
+.home .products .subtitle {
+	font-size: 20px;
+	margin-bottom: 40px;
+}
+
+.home .products .imgs img {
+	padding: 10px;
+}
+
+.home .swiper-container {
+	width: 1200px;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+/* .home .swiper-container img {
+	height: 381px;
+	width: 313px;
+} */
+
+.home .swiper-slide {
+	height: 381px;
+	width: 313px;
+
+	text-align: center;
+	font-size: 18px;
+	/* background: #fff; */
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	transition: 300ms;
+	transform: scale(0.7);
+}
+
+.home .swiper-slide-active,
+.home .swiper-slide-duplicate-active {
+	transform: scale(1);
+	/* border: 8px dashed #fca641; */
+}
+
+.home .swiper-container .product-box {
+	height: 381px;
+	width: 313px;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	align-items: center;
+}
+
+.home .swiper-container .product-box .img {
+	height: 255px;
+	width: 313px;
+	background-color: #0b58ac;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.home .swiper-container .product-box .name {
+	padding: 20px;
+}
+
+.home .swiper-container .product-box .btn {
+	height: 35px;
+	width: 135px;
+	background-color: #2091f3;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.home .swiper-container .swiper-nav-btn {
+	background-color: #048aff36;
+	transform: scale(0.5);
+	padding: 50px 30px;
+	top: 40%;
+}
+
+.home .more-btn {
+	height: 25px;
+	width: 115px;
+	line-height: 25px;
+	color: #136ffb;
+	border: 1px solid #136ffb;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+/* 头部导航 */
+.header {
+	width: 1200px;
+	height: 90px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header .logo {
+	width: 275px;
+	height: 90px;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.header .nav {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	list-style-type: none;
+}
+
+.header .nav a {
+	text-decoration: none;
+}
+
+.header .nav a:visited {
+	color: black;
+}
+
+.header .nav li {
+	padding: 20px;
+	font-weight: bold;
+}
+
+.header .nav .current {
+	color: #fca641;
+}
+
+/* 页脚 */
+.foot {
+	height: 385px;
+	width: 100%;
+	background-image: url('/static/images/about/footbg.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	line-height: 50px;
+}
+
+.home .foot {
+	height: 385px;
+	width: 100%;
+	background-image: url('/static/images/home/footbg.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	line-height: 50px;
+}
+
+.foot .info {
+	width: 600px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	text-align: left;
+}
+
+.foot .info .name {
+	font-size: 36px;
+	margin-bottom: 10px;
+}
+
+.foot .info .addr {
+	font-size: 24px;
+}
+
+.foot .contacts {
+	width: 600px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	font-size: 24px;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.foot .contacts a {
+	text-decoration: none;
+	color: white;
+}
+
+.foot .contacts .item {
+	flex-basis: 48%;
+}
+
+.foot .contacts .iconfont {
+	font-size: 24px;
+}
+
+/* 关于我们 */
+.about .banner {
+	height: 560px;
+	width: 100%;
+	background-image: url('/static/images/about/banner1.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+.about .company {
+	padding: 75px 0;
+	width: 1200px;
+	display: flex;
+	flex-direction: column;
+	line-height: 60px;
+}
+
+.about .company .title {
+	font-size: 38px;
+	align-self: center;
+	margin-bottom: 50px;
+	font-weight: bold;
+}
+
+.about .company .text {
+	font-size: 18px;
+	padding: 20px 60px;
+	text-indent: 40px;
+}
+
+.about .company .circles {
+	display: flex;
+	width: 1200px;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 50px;
+}
+
+.about .company .circles .circle {
+	height: 175px;
+	width: 175px;
+	border-radius: 100%;
+	background-color: #0b58ac;
+	color: white;
+	font-size: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* 产品展示 */
+.product {
+	background-color: #f2f9ff;
+}
+
+.product .banner {
+	height: 560px;
+	width: 100%;
+	background-image: url('/static/images/product/banner1.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+.product .series {
+	width: 1200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 30px 0;
+}
+
+.product .series .title {
+	font-size: 26px;
+	padding-bottom: 30px;
+}
+
+.product .series .tag-bar {
+	width: 1200px;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 30px;
+}
+
+.product .series .tag-bar .tag {
+	background-color: #f5faff;
+	border-color: #e0eaf3;
+	width: 190px;
+	border: solid 1px #e0eaf3;
+	text-align: center;
+	margin: 0 10px 10px 0;
+	font-size: 16px;
+	padding: 5px 0;
+}
+
+.product .series .tag-bar .current {
+	background-color: #bfd6ee;
+}
+
+.product .series .tag-bar .tag:hover {
+	background-color: #bfd6ee;
+}
+
+.product .series .pics {
+	width: 1200px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.product .series .pics .pic {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 280px;
+	height: 280px;
+	background-color: white;
+	margin: 0 20px 20px 0;
+}
+
+/* 设备中心 */
+.equipment .banner {
+	height: 560px;
+	width: 100%;
+	background-image: url('/static/images/equipment/banner1.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+.equipment .container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.equipment .container .info-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1200px;
+	padding: 70px 0;
+}
+
+.equipment .container .info-box .pics img {
+	width: 760px;
+	height: 480px;
+}
+
+.equipment .container .info-box .pics .pic-row img {
+	width: 243px;
+	height: 148px;
+	margin-right: 15px;
+}
+
+.equipment .container .info-box .pics .pic-row {
+	margin-top: 10px;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.equipment .container .info-box .name {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	flex-direction: column;
+	font-size: 30px;
+}
+
+.equipment .container .info-box .name .iconfont {
+	font-size: 30px;
+}
+
+
+.equipment .sw-box {
+	position: relative;
+	height: 640px;
+	width: 760px;
+}
+
+.equipment .sw-box {
+	background: #eee;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+.equipment .swiper {
+	width: 100%;
+	height: 100%;
+}
+
+.equipment .swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.equipment .swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.equipment .sw-box {
+	background: #fff;
+	color: #000;
+}
+
+.equipment .swiper {
+	width: 100%;
+	height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.equipment .swiper-slide {
+	background-size: cover;
+	background-position: center;
+}
+
+.equipment .bigSwiper {
+	height: 75%;
+	width: 100%;
+}
+
+.equipment .thumbSwiper {
+	height: 25%;
+	box-sizing: border-box;
+	padding: 10px 0;
+}
+
+.equipment .thumbSwiper .swiper-slide {
+	width: 33.3%;
+	height: 100%;
+	opacity: 0.4;
+}
+
+.equipment .thumbSwiper .swiper-slide-thumb-active {
+	opacity: 1;
+}
+
+.equipment .swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* 荣誉证书 */
+.certs .banner {
+	height: 560px;
+	width: 100%;
+	background-image: url('/static/images/certs/banner.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+.cert-box {
+	height: 730px;
+	width: 1200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 100px 0;
+}
+
+.cert-box .swiper-container {
+	width: 1200px;
+	height: 100%;
+	overflow: hidden;
+}
+
+.cert-box img {
+	height: 500px;
+}
+
+.cert-box .swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	transition: 300ms;
+	transform: scale(0.8);
+}
+
+.cert-box .swiper-slide-active,
+.cert-box .swiper-slide-duplicate-active {
+	transform: scale(1);
+	border: 8px dashed #fca641;
+}
+
+/* 联系我们 */
+.contact .banner {
+	height: 560px;
+	width: 100%;
+	background-image: url('/static/images/contact/banner.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	margin-bottom: 100px;
+}
+
+.contact .container {
+	display: flex;
+	width: 1200px;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 100px;
+}
+
+.contact .container img[alt=logo] {
+	margin-bottom: 30px;
+}
+
+.contact .container .item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.contact .container .iconfont {
+	font-size: 30px;
+}
+
+.contact .container .mail-row {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+	text-align: right;
+}

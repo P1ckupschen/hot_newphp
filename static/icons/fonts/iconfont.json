@@ -1,0 +1,79 @@
+{
+  "id": "3926677",
+  "name": "豪腾",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "12343077",
+      "name": "account_balance_24px_rounded",
+      "font_class": "account_balance_px_rounded",
+      "unicode": "ed3a",
+      "unicode_decimal": 60730
+    },
+    {
+      "icon_id": "12343159",
+      "name": "home_24px_rounded",
+      "font_class": "home_px_rounded",
+      "unicode": "ed3e",
+      "unicode_decimal": 60734
+    },
+    {
+      "icon_id": "12343203",
+      "name": "print_24px_rounded",
+      "font_class": "print_px_rounded",
+      "unicode": "ed41",
+      "unicode_decimal": 60737
+    },
+    {
+      "icon_id": "12343235",
+      "name": "store_24px_rounded",
+      "font_class": "store_px_rounded",
+      "unicode": "ed42",
+      "unicode_decimal": 60738
+    },
+    {
+      "icon_id": "12344105",
+      "name": "business_24px_rounded",
+      "font_class": "business_px_rounded",
+      "unicode": "ed4c",
+      "unicode_decimal": 60748
+    },
+    {
+      "icon_id": "12344107",
+      "name": "call_24px_rounded",
+      "font_class": "call_px_rounded",
+      "unicode": "ed4d",
+      "unicode_decimal": 60749
+    },
+    {
+      "icon_id": "12344125",
+      "name": "email_24px_rounded",
+      "font_class": "email_px_rounded",
+      "unicode": "ed51",
+      "unicode_decimal": 60753
+    },
+    {
+      "icon_id": "12345443",
+      "name": "insert_photo_24px_rounded",
+      "font_class": "insert_photo_px_rounded",
+      "unicode": "ed73",
+      "unicode_decimal": 60787
+    },
+    {
+      "icon_id": "12347311",
+      "name": "collections_24px_rounded",
+      "font_class": "collections_px_rounded",
+      "unicode": "ed86",
+      "unicode_decimal": 60806
+    },
+    {
+      "icon_id": "12348086",
+      "name": "location_city_24px_rounded",
+      "font_class": "location_city_px_rounded",
+      "unicode": "edab",
+      "unicode_decimal": 60843
+    }
+  ]
+}
